@@ -10,10 +10,6 @@ pipeline:
         type: CI
         spec:
           cloneCodebase: true
-          infrastructure:
-            type: KubernetesHosted
-            spec:
-              identifier: k8s-hosted-infra
           execution:
             steps:
               - step:
@@ -25,6 +21,12 @@ pipeline:
                     image: alpine
                     shell: Sh
                     command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Arm64
+          runtime:
+            type: Cloud
+            spec: {}
   properties:
     ci:
       codebase:
