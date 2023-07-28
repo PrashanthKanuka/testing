@@ -1,0 +1,23 @@
+pipeline:
+  name: sc
+  identifier: sc
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ci
+        identifier: ci
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Build_testing_1690557916145
+          project: default_project
+          inputs:
+            identifier: Build_testing_1690557916145
+            properties:
+              ci:
+                codebase:
+                  build: <+input>
+          outputs: []
