@@ -1,6 +1,6 @@
 pipeline:
   identifier: Build_testing_1690557916145
-  name: Build testing
+  name: Build
   orgIdentifier: default
   projectIdentifier: default_project
   properties:
@@ -19,7 +19,7 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: test
                   spec:
                     shell: Sh
                     command: |-
@@ -36,3 +36,4 @@ pipeline:
             type: Cloud
             spec: {}
         type: CI
+  tags: {}
