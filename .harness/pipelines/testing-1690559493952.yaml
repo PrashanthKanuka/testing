@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_testing_1690559499788
+  name: Build testing
+  orgIdentifier: default
+  projectIdentifier: cc
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1690557902997
+        repoName: PrashanthKanuka/testing
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
