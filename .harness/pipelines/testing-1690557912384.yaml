@@ -30,9 +30,9 @@ pipeline:
                   timeout: ""
                   type: Run
           platform:
-            arch: Amd64
             os: Linux
+            arch: Arm64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
