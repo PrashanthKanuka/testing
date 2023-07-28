@@ -1,0 +1,33 @@
+pipeline:
+  name: Build testing
+  identifier: Build_testing_1690559331991
+  projectIdentifier: ccc
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s-hosted-infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: alpine
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1690557902997
+        repoName: PrashanthKanuka/testing
+        build: <+input>
