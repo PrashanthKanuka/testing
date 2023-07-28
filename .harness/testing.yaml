@@ -1,0 +1,34 @@
+pipeline:
+  name: testing
+  identifier: testing
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: script
+        identifier: script
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          #!/bin/bash
+
+                          pwd
+                          echo "tets"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
