@@ -4,8 +4,8 @@
 
 # Replace these variables with your GitHub username and access token
 GITHUB_USERNAME="PrashanthKanuka"
-#GITHUB_TOKEN="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"
-GITHUB_TOKEN=${Github_Repo.PrashanthKanuka}
+GITHUB_TOKEN="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"
+#GITHUB_TOKEN=${Github_Repo.PrashanthKanuka}
 REPO_NAME="New-updated31"
 
  
