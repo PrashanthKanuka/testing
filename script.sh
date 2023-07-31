@@ -44,6 +44,8 @@ fi
 
 # Clone the repository locally
 git clone "git clone https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$REPO_NAME.git"
+read -p "Enter your username: " $GITHUB_USERNAME
+read -s -p "Enter your password: " $GITHUB_TOKEN
 cd "$REPO_NAME"
 
  
