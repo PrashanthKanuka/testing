@@ -43,7 +43,7 @@ fi
  
 
 # Clone the repository locally
-git clone "git clone https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$REPO_NAME.git"
+git clone "git clone https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$REPO_NAME.git"
 cd "$REPO_NAME"
 
  
